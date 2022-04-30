@@ -8,12 +8,12 @@ public class Author {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Author author = (Author) o;
-        return firstName.equals(author.firstName);
+        return firstName.equals(author.firstName) && secondName.equals(author.secondName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(firstName);
+        return Objects.hash(firstName, secondName);
     }
 
     private String firstName;
